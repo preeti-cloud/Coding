@@ -3,6 +3,9 @@ import { Link, Route } from "react-router-dom";
 import About from "./About";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Auth from './auth';
+
+const auth=new Auth()
 
 function NavBar() {
     return (
@@ -10,7 +13,7 @@ function NavBar() {
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        {/* <a class="navbar-brand" href="#">WebSiteName</a> */}
+                        <button onClick={()=>{auth.login()}}>Login</button>
                     </div>
                     <ul className ="mynavBar" class="nav navbar-nav">
                         <li><Link to="/">Home</Link></li>
